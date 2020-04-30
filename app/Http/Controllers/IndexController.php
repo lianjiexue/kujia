@@ -1,6 +1,6 @@
 <?php 
 namespace App\Http\Controllers;
-
+use App\Model\Product;
 class IndexController
 {
 	public function getSn()
@@ -10,6 +10,8 @@ class IndexController
 	}
 	public function index()
 	{
-		echo $this->getSn();
+		$product = new Product();
+		$goods = $product->first();
+		var_dump($goods->toArray());
 	}
 }

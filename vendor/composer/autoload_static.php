@@ -8,6 +8,8 @@ class ComposerStaticInit8282ace865cc2592fc0d82423f6fabd2
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+        '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
     );
 
@@ -20,20 +22,14 @@ class ComposerStaticInit8282ace865cc2592fc0d82423f6fabd2
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
-            'Symfony\\Component\\Debug\\' => 24,
-            'Symfony\\Component\\Console\\' => 26,
+            'Symfony\\Component\\Translation\\' => 30,
         ),
-        'P' => 
+        'I' => 
         array (
-            'Psr\\Log\\' => 8,
-        ),
-        'D' => 
-        array (
-            'Doctrine\\Instantiator\\' => 22,
-            'Doctrine\\Common\\Lexer\\' => 22,
-            'Doctrine\\Common\\Cache\\' => 22,
-            'Doctrine\\Common\\Annotations\\' => 28,
-            'Doctrine\\Common\\' => 16,
+            'Illuminate\\Support\\' => 19,
+            'Illuminate\\Database\\' => 20,
+            'Illuminate\\Contracts\\' => 21,
+            'Illuminate\\Container\\' => 21,
         ),
         'A' => 
         array (
@@ -54,37 +50,25 @@ class ComposerStaticInit8282ace865cc2592fc0d82423f6fabd2
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
-        'Symfony\\Component\\Debug\\' => 
+        'Symfony\\Component\\Translation\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/debug',
+            0 => __DIR__ . '/..' . '/symfony/translation',
         ),
-        'Symfony\\Component\\Console\\' => 
+        'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/console',
+            0 => __DIR__ . '/..' . '/illuminate/support',
         ),
-        'Psr\\Log\\' => 
+        'Illuminate\\Database\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+            0 => __DIR__ . '/..' . '/illuminate/database',
         ),
-        'Doctrine\\Instantiator\\' => 
+        'Illuminate\\Contracts\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
+            0 => __DIR__ . '/..' . '/illuminate/contracts',
         ),
-        'Doctrine\\Common\\Lexer\\' => 
+        'Illuminate\\Container\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/lexer/lib/Doctrine/Common/Lexer',
-        ),
-        'Doctrine\\Common\\Cache\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
-        ),
-        'Doctrine\\Common\\Annotations\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
-        ),
-        'Doctrine\\Common\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+            0 => __DIR__ . '/..' . '/illuminate/container',
         ),
         'App\\' => 
         array (
@@ -92,7 +76,18 @@ class ComposerStaticInit8282ace865cc2592fc0d82423f6fabd2
         ),
     );
 
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/..' . '/nesbot/carbon/src',
+    );
+
     public static $prefixesPsr0 = array (
+        'U' => 
+        array (
+            'UpdateHelper\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/kylekatarnls/update-helper/src',
+            ),
+        ),
         'T' => 
         array (
             'Twig_' => 
@@ -102,21 +97,9 @@ class ComposerStaticInit8282ace865cc2592fc0d82423f6fabd2
         ),
         'D' => 
         array (
-            'Doctrine\\ORM\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/orm/lib',
-            ),
-            'Doctrine\\DBAL\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/dbal/lib',
-            ),
             'Doctrine\\Common\\Inflector\\' => 
             array (
                 0 => __DIR__ . '/..' . '/doctrine/inflector/lib',
-            ),
-            'Doctrine\\Common\\Collections\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/collections/lib',
             ),
         ),
     );
@@ -126,6 +109,7 @@ class ComposerStaticInit8282ace865cc2592fc0d82423f6fabd2
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit8282ace865cc2592fc0d82423f6fabd2::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit8282ace865cc2592fc0d82423f6fabd2::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit8282ace865cc2592fc0d82423f6fabd2::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit8282ace865cc2592fc0d82423f6fabd2::$prefixesPsr0;
 
         }, null, ClassLoader::class);

@@ -10,7 +10,7 @@
     ],
     "require": {
         "twig/twig": "^1.42",
-        "illuminate/database": "^5.4"
+        "illuminate/database": "^6.20"
     },
     "autoload": {
         "psr-4": {
